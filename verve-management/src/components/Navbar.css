@@ -1,0 +1,19 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+/* Assuming the button has the class .btn-add-event */
+.btn-add-event {
+    background-color: #dc3545; /* Default button color (red, Bootstrap's danger color) */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-add-event:hover {
+    background-color: #82233e; /* Use your theme color here */
+    color: white; /* Keep text color white */
+  }
+  

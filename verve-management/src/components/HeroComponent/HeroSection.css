@@ -1,0 +1,43 @@
+.hero-container {
+  height: 60vh;
+  position: relative;
+}
+
+.hero-section {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Centered, detached, white navbar over hero */
+.hero-navbar-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure your actual NavigationBar doesn't have conflicting outer margins/paddings */
+
+/* Center heading */
+.hero-heading {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
