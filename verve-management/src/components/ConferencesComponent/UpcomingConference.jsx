@@ -74,6 +74,9 @@ const conferences = [
   },
 ];
 
+export const upcomingEvents = conferences;
+
+
 export default function UpcomingConference({ dynamicEvents = [] }) {
     const allEvents = [...dynamicEvents, ...conferences]; // dynamic on top
   

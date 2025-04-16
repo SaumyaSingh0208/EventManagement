@@ -1,18 +1,31 @@
+// ✅ HeroSection.jsx
 import React, { useState } from 'react';
 import NavigationBar from '../Navbar';
 import AddEventModal from '../AddEventModal';
-import ConferenceModal from '../ConferenecModalComponent/ConferenceModal';
+import MiniCarouselModal from '../MiniCarouselModal/MiniCarouselModal';
 import HeroImage from '../../assets/images/hero-img.png';
 import './HeroSection.css';
 
 const HeroSection = ({ events, onAddEvent }) => {
   const [showAddModal, setShowAddModal] = useState(false);
-  const [showConferenceModal, setShowConferenceModal] = useState(false);
+  const [modalData, setModalData] = useState({ visible: false, category: '' });
 
   const handleAddEvent = (newEvent) => {
     onAddEvent(newEvent);
     setShowAddModal(false);
   };
+
+  const handleModalOpen = (category) => {
+    setModalData({ visible: true, category });
+  };
+
+  const handleModalClose = () => {
+    setModalData({ visible: false, category: '' });
+  };
+
+  const filteredEvents = events.filter((event) => {
+    return event.category === modalData.category;
+  });
 
   return (
     <div className="hero-container">
@@ -22,7 +35,8 @@ const HeroSection = ({ events, onAddEvent }) => {
       >
         <div className="hero-navbar-wrapper">
           <NavigationBar
-            onConferencesClick={() => setShowConferenceModal(true)} // ✅ Show modal instead
+            onConferencesHover={() => handleModalOpen("Conferences")}
+            onBespokeHover={() => handleModalOpen("Bespoke")}
             onAddEventClick={() => setShowAddModal(true)}
           />
         </div>
@@ -32,10 +46,11 @@ const HeroSection = ({ events, onAddEvent }) => {
         </div>
       </div>
 
-      {/* Conference Modal */}
-      <ConferenceModal
-        show={showConferenceModal}
-        onHide={() => setShowConferenceModal(false)}
+      {/* Mini Carousel Modal */}
+      <MiniCarouselModal
+        show={modalData.visible}
+        onClose={handleModalClose}
+        dynamicEvents={filteredEvents}
       />
 
       {/* Add Event Modal */}

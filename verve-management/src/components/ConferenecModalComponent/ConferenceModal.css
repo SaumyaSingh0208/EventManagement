@@ -1,9 +1,0 @@
-/* ConferenceModal.css */
-.conference-modal .modal-content {
-    border-radius: 20px;
-    padding: 1rem;
-    max-height: 90vh;
-    overflow-y: auto;
-    background-color: #fff;
-  }
-  
