@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+- Project overview  
+- Key functionality (like the Add Event → display in Upcoming section)  
+- How to install, run, and use the app  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Verve-Inspired Event Landing Page (React + Bootstrap)
 
-In the project directory, you can run:
+This is a responsive, single-page event landing site inspired by the Verve Management website. It's built using **React** and **Bootstrap 5**, focusing on clean UI, dynamic content rendering, and modular components.
 
-### `npm start`
+## 🔥 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Hero Section** with background image and overlaid navbar
+- **Upcoming Events Section** styled as event cards
+- **Add Event Modal** to manually add new events dynamically
+- Events added through the modal immediately appear in the **Upcoming Events** list
+- Fully responsive and styled to match the look and feel of real-world event websites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Live Preview
 
-### `npm test`
+> _Add a screenshot or deployed link here if available_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ⚙️ Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React (via `create-react-app`)
+- Bootstrap 5
+- React Icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Functionality
 
-### `npm run eject`
+### ✅ Add Event Flow
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Click on the `Add Event` button (usually in the navbar).
+2. A modal pops up allowing you to enter:
+   - Title
+   - Location
+   - Start & End Date
+   - Image URL
+   - Event Type
+3. On clicking `Submit`, the new event is immediately rendered as a new card in the **Upcoming Events** section without reloading the page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/your-username/event-landing-page.git
+cd event-landing-page
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+### Run the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+> The app will run at `http://localhost:3000/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧠 Future Enhancements
 
-### Advanced Configuration
+- Integrate with WordPress backend for dynamic event fetching
+- Add event filtering and sorting options
+- Countdown timer for each event
+- Carousel-style dropdown for “Bespoke Engagements” & “Conferences” sections
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This project is open-source and available under the [MIT License](LICENSE).
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
